@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeSathi AI | C++ Learning Companion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">C++</div>
+        <div>
+          <h2>CodeSathi AI</h2>
+          <small>Your coding companion</small>
+        </div>
+      </div>
+
+      <button class="new-chat" onclick="newChat()">+ New Chat</button>
+
+      <p class="side-label">LEARN C++</p>
+      <button class="topic" onclick="askTopic('Explain classes and objects')">📘 Classes & Objects</button>
+      <button class="topic" onclick="askTopic('Explain inheritance')">🧬 Inheritance</button>
+      <button class="topic" onclick="askTopic('Explain polymorphism')">✨ Polymorphism</button>
+      <button class="topic" onclick="askTopic('Explain constructors and destructors')">⚙️ Constructors</button>
+      <button class="topic" onclick="askTopic('Give me OOP viva questions')">🎓 Viva Practice</button>
+
+      <div class="sidebar-bottom">
+        <span class="status-dot"></span> Beginner-friendly learning
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h3>AI Learning Assistant</h3>
+          <small>Object-Oriented Programming in C++</small>
+        </div>
+        <span class="online">● Online</span>
+      </header>
+
+      <section class="chat" id="chat">
+        <div class="welcome" id="welcome">
+          <div class="welcome-icon">⌘</div>
+          <h1>Hey, future coder! 👋</h1>
+          <p>I'm CodeSathi AI. Let's make C++ easy, one concept at a time.</p>
+          <div class="suggestions">
+            <button onclick="askTopic('Explain OOP in simple language')">What is OOP?</button>
+            <button onclick="askTopic('Give me a simple C++ program')">Show a C++ program</button>
+            <button onclick="askTopic('Give me OOP viva questions')">Practice viva questions</button>
+            <button onclick="askTopic('Explain function overloading and overriding')">Overloading vs overriding</button>
+          </div>
+        </div>
+      </section>
+
+      <form class="input-area" id="chatForm">
+        <input id="userInput" type="text"
+          placeholder="Ask me anything about C++..."
+          autocomplete="off" required>
+        <button type="submit" aria-label="Send message">➤</button>
+      </form>
+      <p class="footer-note">CodeSathi AI · Learn • Practice • Grow</p>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

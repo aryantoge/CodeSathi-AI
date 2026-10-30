@@ -1,0 +1,12 @@
+{
+"name": "codesathi-ai",
+"version": "1.0.0",
+"description": "C++ OOP learning chatbot",
+"main": "Backend/server.js",
+"scripts": {
+"start": "node Backend/server.js"
+},
+"dependencies": {
+"express": "^5.1.0"
+}
+}

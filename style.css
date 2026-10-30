@@ -1,0 +1,294 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0b1020;
+  color: #edf0ff;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 265px;
+  padding: 25px 17px;
+  background: #11172a;
+  border-right: 1px solid #252d45;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  padding: 13px 9px;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.brand h2 {
+  font-size: 18px;
+}
+
+small {
+  color: #9ca9c9;
+  font-size: 12px;
+}
+
+.new-chat {
+  padding: 12px;
+  border: 1px solid #6d5ce7;
+  border-radius: 10px;
+  background: #272044;
+  color: white;
+}
+
+.side-label {
+  font-size: 11px;
+  color: #8490b1;
+  margin-top: 23px;
+  letter-spacing: 1.5px;
+}
+
+.topic {
+  text-align: left;
+  padding: 12px;
+  border: 0;
+  border-radius: 9px;
+  color: #dce2f7;
+  background: transparent;
+}
+
+.topic:hover, .suggestions button:hover {
+  background: #252d49;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 22px;
+  color: #a9b4d0;
+  font-size: 12px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #34d399;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 30px;
+  border-bottom: 1px solid #252d45;
+}
+
+.topbar h3 {
+  margin-bottom: 5px;
+}
+
+.online {
+  color: #6ee7b7;
+  font-size: 12px;
+}
+
+.chat {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 25px;
+}
+
+.welcome {
+  text-align: center;
+  padding-top: 55px;
+}
+
+.welcome-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 22px;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+}
+
+.welcome h1 {
+  font-size: clamp(25px, 4vw, 36px);
+  margin-bottom: 12px;
+}
+
+.welcome p {
+  color: #a9b4d0;
+  line-height: 1.6;
+}
+
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 560px;
+  margin: 30px auto;
+}
+
+.suggestions button {
+  background: #151d32;
+  border: 1px solid #303a58;
+  color: #e4e9ff;
+  border-radius: 12px;
+  padding: 16px 12px;
+}
+
+.message {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  background: #292447;
+  border-radius: 10px;
+}
+
+.message.user .avatar {
+  background: #1d3b67;
+}
+
+.bubble {
+  max-width: 100%;
+  min-width: 0;
+  background: #151d32;
+  border: 1px solid #2a3450;
+  border-radius: 5px 14px 14px 14px;
+  padding: 14px 16px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.message.user .bubble {
+  background: #202b49;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  max-width: 850px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 8px;
+  border: 1px solid #394363;
+  border-radius: 15px;
+  background: #151d32;
+}
+
+.input-area input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: white;
+  padding: 12px;
+}
+
+.input-area button {
+  border: 0;
+  border-radius: 10px;
+  background: #7655ed;
+  color: white;
+  padding: 0 18px;
+  font-size: 20px;
+}
+
+.footer-note {
+  text-align: center;
+  padding: 12px 8px 18px;
+  color: #7886a8;
+  font-size: 11px;
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    width: 76px;
+    padding: 16px 8px;
+    align-items: center;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .brand h2, .brand small, .side-label,
+  .topic, .new-chat, .sidebar-bottom {
+    display: none;
+  }
+
+  .logo {
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+
+  .topbar {
+    padding: 18px 14px;
+  }
+
+  .chat {
+    padding: 20px 12px;
+  }
+
+  .welcome {
+    padding-top: 35px;
+  }
+
+  .suggestions {
+    grid-template-columns: 1fr;
+  }
+
+  .input-area {
+    width: calc(100% - 24px);
+  }
+}
